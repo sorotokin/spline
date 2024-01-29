@@ -16,7 +16,7 @@ var selectedMinX;
 var selectedMaxX;
 
 function updateSplinePath() {
-    if (path) {
+    if (path && path.parentNode == main) {
         main.removeChild(path);
     }
     let x = [];
@@ -56,10 +56,10 @@ function selectCircle(evt) {
     selectedCY0 = parseFloat(selected.getAttribute("cy"));
     selectedX0 = evt.clientX;
     selectedY0 = evt.clientY;
-    let prev = parametric ? null : selected.previousElementSibing;
-    let next = parametric ? null : selected.nextElementSibing;
+    let prev = parametric ? null : selected.previousElementSibling;
+    let next = parametric ? null : selected.nextElementSibling;
     selectedMinX = (prev instanceof SVGCircleElement ? parseFloat(prev.getAttribute("cx")) : 0) + 10;
-    selectedMaxX = (prev instanceof SVGCircleElement ? parseFloat(next.getAttribute("cx")) : window.innerWidth) - 10;
+    selectedMaxX = (next instanceof SVGCircleElement ? parseFloat(next.getAttribute("cx")) : window.innerWidth) - 10;
 }
 
 function moveCircle(evt) {
