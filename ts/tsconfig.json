@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "module": "commonjs",
+    "module": "ES6",
     "rootDir": "./src",
     "outDir": "./dist",
     "esModuleInterop": true,
@@ -18,7 +18,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "exactOptionalPropertyTypes": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "moduleResolution": "node"
   },
   "exclude": [
     "./test"

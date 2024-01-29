@@ -1,4 +1,4 @@
-import { findFirstGood } from "./base";
+import { findFirstGood } from "./base.js";
 
 export type SplinePoints = Float64Array | Float32Array | number[];
 
@@ -252,7 +252,7 @@ export class Spline {
      * This function produces SVG curve for this case; this should be a spline for
      * x coordinates and other should be a spline for y.
      */
-    asPath2(other: Spline, scale: number): string {
+    asPath2(other: Spline, scale: number = 1): string {
         const t = this.x;
         if (t.length != other.x.length) {
             throw "Inconsistent spline lengths";
