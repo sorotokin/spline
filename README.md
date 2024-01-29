@@ -8,5 +8,5 @@ Typescript code is in `ts/src` folder. To compile to JavaScript, run `tsc` comma
 in `ts` folder, JavaScript files will appear in `ts/dist`.
 
 Demo (source in `ts/demo` folder) can be seen at at:
-- [Simple](https://sorotokin.com/spline/demo/parametric.html)
+- [Simple](https://sorotokin.com/spline/demo/simple.html)
 - [Parametric](https://sorotokin.com/spline/demo/parametric.html)
