@@ -1,4 +1,4 @@
-import { findFirstGood } from "./base.js";
+import { findFirstGood } from "./base";
 
 export type SplinePoints = Float64Array | Float32Array | number[];
 

@@ -32,7 +32,7 @@ describe("Interpolation", () => {
 });
 
 describe("Inverse", () => {
-    it("sline of inverse", () => {
+    it("spline of inverse", () => {
         let spline = new Spline([0, 1, 3, 7, 9], [1, 3, 5, 9, 16]);
         expect(spline.at(spline.inverse(0.4, 1e-10))).toBeCloseTo(0.4, 9);
         expect(spline.at(spline.inverse(1.8, 1e-10))).toBeCloseTo(1.8, 9);
